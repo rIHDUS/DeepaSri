@@ -2,8 +2,8 @@
 import cgi
 import cgitb
 cgitb.enable()
-
-print("""<!doctype html>
+print("Content-Type: text/html\n")
+print('''<!doctype html>
 <html class="no-js" lang="zxx">
     <head>
         <!-- Meta Tags -->
@@ -207,4 +207,5 @@ print("""<!doctype html>
 		<script src="js/main.js"></script>
     </body>
 </html>		
-      """)
+      
+      ''')

@@ -3,7 +3,8 @@ import cgi
 import cgitb
 cgitb.enable()
 print("Content-Type: text/html\n")
-print(""" 
+
+print('''
       <html class="no-js" lang="zxx">
     <head>
         <!-- Meta Tags -->
@@ -178,4 +179,4 @@ print("""
 		<script src="js/main.js"></script>
     </body>
 </html>  
-""")
+''')
