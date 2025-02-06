@@ -1,3 +1,8 @@
+#!C:/Python312/python.exe
+import cgi
+import cgitb
+cgitb.enable()
+
 print("""<!doctype html>
 <html class="no-js" lang="zxx">
     <head>
