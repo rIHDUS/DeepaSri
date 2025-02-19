@@ -309,7 +309,7 @@ body{
 }
 .header .logo {
 	float: left;
-	margin-top: 18px;
+	
 }
 .header .navbar {
 	background: none;
@@ -1078,7 +1078,7 @@ body{
 }
 .call-action .content{
 	text-align:center;
-	padding:100px 265px;
+	padding:100px 50px;
 }
 .call-action .content h2{
 	color:#fff;
