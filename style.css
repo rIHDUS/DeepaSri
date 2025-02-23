@@ -432,9 +432,9 @@ body{
 /* Dropdown Menu */
 .header .nav li .dropdown {
 	background: #fff;
-	width: 220px;
+	width: 1000px;
 	position: absolute;
-	left:-20px;
+	left:-300px;
 	top: 100%;
 	z-index: 999;
 	-webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
@@ -4171,3 +4171,5 @@ body{
 /*=========================
 	End Footer CSS
 ===========================*/
+
+  
