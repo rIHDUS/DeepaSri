@@ -4305,7 +4305,7 @@ body{
 
 .review-card {
     flex: 0 0 calc(100% / 3 - 15px); /* Ensures only 3 cards are visible */
-    max-width: calc(100% / 3 - 15px);
+    
 }
 
 .carousel-btn {
