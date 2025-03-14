@@ -216,15 +216,17 @@
 
                       </ul> -->
                     </li>
+                    <li><a href="blog.html">Blogs </a></li>
+
                     <li>
                       <a href="#">Pages <i class="icofont-rounded-down"></i></a>
                       <ul class="dropdown">
 
 
                         <li><a href="gallery.html">Gallary</a></li>
+                        <li><a href="insights.html">Insights</a></li>
                         <li><a href="Appointment.html">Appointment</a></li>
                         <li><a href="dotors.html">Find Doctor</a></li>
-                        <li><a href="blog.html">Blog</a></li>
 
 
                       </ul>
@@ -476,7 +478,7 @@
           <!-- End Single features -->
         </div>
       </div>
-    </div>Expert Care from the Best Doctors for Your Health & Well-Being
+    </div>
   </section>
   <!--/ End Feautes -->
 
@@ -1118,31 +1120,30 @@
                   <!-- Review 1 -->
                   <div class="review-card">
                     <div class="review-header">
-                      <div class="profile-icon">C</div>
+                      <div class="profile-icon">P</div>
                       <div>
-                        <p class="review-name">Chandra Jora</p>
-                        <p class="review-date">6 months ago</p>
+                        <p class="review-name">Pratima Shahu</p>
+                        <p class="review-date">3 months ago</p>
                       </div>
                       <img src="/DeepaSri/img/google.png" class="google-icon" alt="Google">
                     </div>
-                    <p class="review-stars">☆☆☆☆☆</p>
-                    <p class="review-text">Thank you Raksha doctors and nursing staff... My aunty was admitted for
-                      severe headache and fever...</p>
+                    <p class="review-stars">★★★★★</p>
+                    <p class="review-text">We came with low HB, treated very well doctors and nursing staff is very helpful and cooperative</p>
                   </div>
 
                   <!-- Review 2 -->
                   <div class="review-card">
                     <div class="review-header">
-                      <img src="user2.jpg" class="profile-img">
+                      <img src="/DeepaSri/img/user2.png" class="profile-img">
                       <div>
-                        <p class="review-name">Shakeer Vemmully</p>
-                        <p class="review-date">6 months ago</p>
+                        <p class="review-name">Deepak Behera</p>
+                        <p class="review-date">4 months ago</p>
                       </div>
                       <img src="/DeepaSri/img/google.png" class="google-icon" alt="Google">
                     </div>
                     <p class="review-stars">★☆☆☆</p>
-                    <p class="review-text">I strongly advise against using this hospital for any lab tests. They failed
-                      to provide the results on time...</p>
+                    <p class="review-text">Management and doctor and nursing staff very cooperative.
+                      As a attendant my experience good</p>
                   </div>
 
                   <!-- Review 3 -->
@@ -1150,14 +1151,13 @@
                     <div class="review-header">
                       <div class="profile-icon">S</div>
                       <div>
-                        <p class="review-name">Sriramya Anusuri</p>
+                        <p class="review-name">Sree</p>
                         <p class="review-date">8 months ago</p>
                       </div>
                       <img src="/DeepaSri/img/google.png" class="google-icon" alt="Google">
                     </div>
                     <p class="review-stars">★★★★☆</p>
-                    <p class="review-text">I recently got admitted for UTI treatment. The doctors were very good and the
-                      staff was very friendly...</p>
+                    <p class="review-text">Fantastic Treatment and Extreme hospitality.  The best Services especially Nursing, attendance in seconds of call 24/7.  Thanks you team.  Keep it up.  Sreekumar</p>
                   </div>
 
                   <!-- Review 4 -->
@@ -1404,25 +1404,7 @@
   <script src="js/main.js"></script>
   <!-- my js -->
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-  <script>
-    let index = 0;
-    const track = document.querySelector(".carousel-track");
-    const reviewCards = document.querySelectorAll(".review-card").length;
-    const cardWidth = document.querySelector(".review-card").offsetWidth;
-    const visibleCards = 3; // Change to 1 for mobile view
-
-    function moveSlide(step) {
-      index += step;
-      if (index < 0) {
-        index = reviewCards - visibleCards;
-      } else if (index > reviewCards - visibleCards) {
-        index = 0;
-      }
-      track.style.transform = `translateX(-${index * (cardWidth + 20)}px)`;
-    }
-
-  </script>
-
+  
 </body>
 
 </html>

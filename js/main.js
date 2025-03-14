@@ -329,3 +329,34 @@ Version:	1.1
 	
 	
 })(jQuery);
+
+
+    // Select all images with class 'gallery-img'
+	const images = document.querySelectorAll('.gallery-img');
+
+    images.forEach(img => {
+        img.addEventListener('mouseover', () => {
+            img.style.transform = 'scale(1.1)';
+        });
+        img.addEventListener('mouseout', () => {
+            img.style.transform = 'scale(1)';
+        });
+    });
+
+
+	//review page
+	let index = 0;
+    const track = document.querySelector(".carousel-track");
+    const reviewCards = document.querySelectorAll(".review-card").length;
+    const cardWidth = document.querySelector(".review-card").offsetWidth;
+    const visibleCards = 3; // Change to 1 for mobile view
+
+    function moveSlide(step) {
+      index += step;
+      if (index < 0) {
+        index = reviewCards - visibleCards;
+      } else if (index > reviewCards - visibleCards) {
+        index = 0;
+      }
+      track.style.transform = `translateX(-${index * (cardWidth + 20)}px)`;
+    }
