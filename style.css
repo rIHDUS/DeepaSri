@@ -4335,6 +4335,45 @@ body{
         width: 100%;
     }
 }
-/* gallary */
+/* contact side bar */
 
+.contact-sidebar {
+	position: fixed;
+	top: 70%;
+	left: 0;
+	transform: translateY(-50%);
+	display: flex;
+	flex-direction: column;
+	z-index: 1000;
+  }
+  
+  .contact-icon {
+	color: #fff;
+	text-align: center;
+	padding: 15px;
+	font-size: 24px;
+	width: 50px;
+	background: #333;
+	border-radius: 0 8px 8px 0;
+	margin-bottom: 0;
+	transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .contact-icon:hover {
+	transform: translateX(10px);
+	background-color: #0055a5;
+  }
+  
+  
+  .whatsapp-icon {
+	background-color: #01d080;
+  }
+  
+  .phone-icon {
+	background-color: #037aff;
+  }
+  
+  .email-icon {
+	background-color:#01d080;
+  }
 
