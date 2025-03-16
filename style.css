@@ -5065,74 +5065,55 @@ body {
 	background-color: #01d080;
 }
 
-/*review responsive*/
-@media (max-width: 768px) {
-	.reviews-section .container {
-		padding: 10px;
-	}
+/* Review Section Responsive Styling */
+.review-carousel {
+    position: relative;
+    overflow: hidden;
+  }
 
-	.reviews-section h2 {
-		font-size: 1.5rem;
-	}
+  .carousel-track-wrapper {
+    display: flex;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
 
-	.hospital-info {
-		padding: 10px;
-	}
+  .carousel-track {
+    display: flex;
+    gap: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
 
-	.hospital-logo {
-		width: 80%;
-	}
+  .review-card {
+    flex: 0 0 calc(100% / 3); /* Default for desktop */
+    box-sizing: border-box;
+    scroll-snap-align: start;
+  }
 
-	.hospital-details h6 {
-		font-size: 1rem;
-	}
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+  }
 
-	.hospital-details p {
-		font-size: 0.9rem;
-	}
+  .carousel-btn.left {
+    left: 0;
+  }
 
-	.review-carousel {
-		flex-direction: column;
-		text-align: center;
-	}
+  .carousel-btn.right {
+    right: 0;
+  }
 
-	.carousel-btn {
-		width: 30px;
-		height: 30px;
-		font-size: 1rem;
-	}
-
-	.carousel-track-wrapper {
-		overflow-x: auto;
-		scroll-snap-type: x mandatory;
-	}
-
-	.carousel-track {
-		display: flex;
-		gap: 10px;
-	}
-
-	.review-card {
-		min-width: 100%;
-		padding: 10px;
-	}
-
-	.review-header {
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-	}
-
-	.review-name {
-		font-size: 1rem;
-	}
-
-	.review-stars {
-		font-size: 1rem;
-	}
-
-	.review-text {
-		font-size: 0.9rem;
-	}
-	
-}
+  /* Responsive: Show only 1 review per slide on mobile */
+  @media (max-width: 768px) {
+    .review-card {
+      flex: 0 0 100%;
+    }
+  }
