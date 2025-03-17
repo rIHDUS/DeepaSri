@@ -9,6 +9,7 @@
 </head>
 
 <body>
+
     <style>
         /* General Reset */
         * {
@@ -23,8 +24,8 @@
             position: fixed;
             width: 100vw;
             height: 100vh;
-            background: linear-gradient(45deg, #ff416c, #ff4b2b, #00dbde, #fc00ff);
-            background-size: 300% 300%;
+            background: linear-gradient(45deg, #3a1c71, #ff0099, #00dbde, #fc00ff);
+            background-size: 400% 400%;
             animation: moveBackground 10s infinite alternate ease-in-out;
             z-index: -1;
         }
@@ -32,6 +33,14 @@
         @keyframes moveBackground {
             0% {
                 background-position: 0% 50%;
+            }
+
+            25% {
+                background-position: 25% 75%;
+            }
+
+            50% {
+                background-position: 50% 25%;
             }
 
             100% {
@@ -119,7 +128,6 @@
             gap: 20px;
             justify-content: center;
             flex-wrap: wrap;
-            /* Prevents overflow */
             max-width: 100%;
         }
 
@@ -209,35 +217,6 @@
                 font-size: 14px;
             }
         }
-
-        /* 🔥 Moving Background Animation */
-        .background-animation {
-            position: fixed;
-            width: 100vw;
-            height: 100vh;
-            background: linear-gradient(45deg, #3a1c71, #ff0099, #00dbde, #fc00ff);
-            background-size: 400% 400%;
-            animation: moveBackground 10s infinite alternate ease-in-out;
-            z-index: -1;
-        }
-
-        @keyframes moveBackground {
-            0% {
-                background-position: 0% 50%;
-            }
-
-            25% {
-                background-position: 25% 75%;
-            }
-
-            50% {
-                background-position: 50% 25%;
-            }
-
-            100% {
-                background-position: 100% 50%;
-            }
-        }
     </style>
     <!-- Background Animation -->
     <div class="background-animation"></div>
@@ -261,7 +240,6 @@
             <button class="action-btn secondary-btn">Book an Appointment</button>
         </div>
     </section>
-
 </body>
 
 </html>
