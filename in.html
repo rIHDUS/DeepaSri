@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+  <!-- Meta Tags -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="keywords" content="Site keywords here" />
+  <meta name="description" content="" />
+  <meta name="copyright" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Title -->
+  <title>Raksha Hospital</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.ico" />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+    rel="stylesheet" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <!-- Nice Select CSS -->
+  <link rel="stylesheet" href="css/nice-select.css" />
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <!-- icofont CSS -->
+  <link rel="stylesheet" href="css/icofont.css" />
+  <!-- Slicknav -->
+  <link rel="stylesheet" href="css/slicknav.min.css" />
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="css/owl-carousel.css" />
+  <!-- Datepicker CSS -->
+  <link rel="stylesheet" href="css/datepicker.css" />
+  <!-- Animate CSS -->
+  <link rel="stylesheet" href="css/animate.min.css" />
+  <!-- Magnific Popup CSS -->
+  <link rel="stylesheet" href="css/magnific-popup.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+
+  <!-- Medipro CSS -->
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <style>
+    /* Top Navbar */
+    .top-navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #004080;
+        color: white;
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .menu {
+        display: flex;
+        gap: 10px;
+        flex-wrap: nowrap;
+    }
+
+    .fancy-btn {
+        padding: 12px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        background: linear-gradient(45deg, blue, green);
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: 0.3s;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .fancy-btn i {
+        font-size: 18px;
+    }
+
+    .fancy-btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    }
+
+    /* Hide text on small screens */
+    @media (max-width: 768px) {
+        .top-navbar {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
+
+        .menu {
+            gap: 15px;
+        }
+
+        .fancy-btn {
+            font-size: 0; /* Hide text */
+            padding: 10px;
+            width: 45px; /* Make button square */
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .fancy-btn i {
+            font-size: 20px; /* Keep icon size */
+        }
+    }
+
+    /* Bottom Navbar */
+    .bottom-navbar {
+        background: linear-gradient(to right, #0066b2, #00a2b8);
+        padding: 10px 20px;
+    }
+
+    .bottom-navbar .navbar-nav .nav-link {
+        color: white !important;
+        text-align: center;
+    }
+
+    .dropdown-toggle::after {
+        display: none;
+    }
+
+    /* Proper alignment for collapsed navbar */
+    @media (max-width: 992px) {
+        .navbar-collapse {
+            text-align: left;
+        }
+        .navbar-nav {
+            flex-direction: column;
+            width: 100%;
+        }
+        .navbar-nav .nav-item {
+            margin: 5px 0;
+        }
+    }
+</style>
+
+
+</head>
+
+<body>
+  <!-- Preloader -->
+  <!-- <div class="preloader">
+    <div class="loader">
+      <div class="loader-outter"></div>
+      <div class="loader-inner"></div>
+
+      <div class="indicator">
+        <svg width="16px" height="12px">
+          <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+          <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+        </svg>
+      </div>
+    </div>
+  </div> -->
+
+
+    <div class="top-navbar">
+        <div class="logo">Your Logo</div>
+        <div class="menu">
+            <button class="fancy-btn"><i class="fas fa-calendar-check"></i> <span class="btn-text">Appointment</span></button>
+            <button class="fancy-btn"><i class="fas fa-triangle-exclamation"></i> <span class="btn-text">Emergency</span></button>
+            <button class="fancy-btn"><i class="fas fa-notes-medical"></i> <span class="btn-text">Book Appointment</span></button>
+        </div>
+    </div>
+
+    <!-- Bottom Navbar -->
+    <nav class="navbar navbar-expand-lg bottom-navbar">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse text-center" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="doctors.html">Doctors</a></li>
+    
+                    <!-- Specialities Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="specialitiesDropdown" role="button" data-bs-toggle="dropdown">
+                            Specialities
+                        </a>
+                        <ul class="dropdown-menu">
+                            <div class="row">
+                                <div class="col-sm-6 col-lg-4">
+                                    <li><a class="dropdown-item" href="Diseases/Obstetrics_Gynaecology.html">Obstetrics & Gynaecology</a></li>
+                                    <li><a class="dropdown-item" href="Diseases/general_surgery.html">General Surgery</a></li>
+                                    <li><a class="dropdown-item" href="Diseases/general_medicine.html">General Medicine</a></li>
+                                    <li><a class="dropdown-item" href="Diseases/urology.html">Urology</a></li>
+                                    <li><a class="dropdown-item" href="Diseases/skin_cosmetology.html">Skin & Cosmetology</a></li>
+                                    <li><a class="dropdown-item" href="Diseases/diabetology.html">Diabetology</a></li>
+                                </div>
+                                <div class="col-sm-6 col-lg-4">
+                                    <li><a class="dropdown-item" href="Diseases/pediatrics.html">Paediatrics</a></li>
+                                    <li><a class="dropdown-item" href="Diseases/orthopedics.html">Orthopedics</a></li>
+                                    <li><a class="dropdown-item" href="Diseases/ent.html">ENT</a></li>
+                                    <li><a class="dropdown-item" href="Diseases/ophthalmology.html">Ophthalmology</a></li>
+                                    <li><a class="dropdown-item" href="Diseases/cardiology.html">Cardiology</a></li>
+                                    <li><a class="dropdown-item" href="Diseases/High_Risk_Pregnancy.html">High-Risk Pregnancy Care</a></li>
+                                </div>
+                                <div class="col-sm-6 col-lg-4">
+                                    <li><a class="dropdown-item" href="Diseases/oncology.html">Oncology</a></li>
+                                    <li><a class="dropdown-item" href="Diseases/pulmonology.html">Pulmonology</a></li>
+                                    <li><a class="dropdown-item" href="Diseases/vascular.html">Vascular & Endovascular Surgery</a></li>
+                                    <li><a class="dropdown-item" href="Diseases/Nephrology.html">Nephrology</a></li>
+                                    <li><a class="dropdown-item" href="Diseases/gastroenterology.html">Gastroenterology</a></li>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+    
+                    <li class="nav-item"><a class="nav-link" href="healthCheckups.html">Health Check Up</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blogs</a></li>
+    
+                    <!-- Pages Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-bs-toggle="dropdown">
+                            Pages
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="gallery.html">Gallery</a></li>
+                            <li><a class="dropdown-item" href="insights.html">Insights</a></li>
+                            <li><a class="dropdown-item" href="Appointment.html">Appointment</a></li>
+                            <li><a class="dropdown-item" href="doctors.html">Find Doctor</a></li>
+                        </ul>
+                    </li>
+                </ul>
+    
+                <!-- Language and Search Buttons -->
+                <div class="d-flex">
+                    <div class="dropdown me-2">
+                        <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-globe"></i> EN
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">English</a></li>
+                            <li><a class="dropdown-item" href="#">Hindi</a></li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-light me-2">Podcast</button>
+                    <button class="btn btn-light"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
