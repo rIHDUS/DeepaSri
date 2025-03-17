@@ -385,3 +385,25 @@ Version:	1.1
 	
 		updateSlide();
 	  });
+
+	  //book toggle button
+	  function toggleMenu() {
+		let menu = document.getElementById("sideMenu");
+		let button = document.getElementById("floatingMenu");
+		let icon = document.querySelector(".menu-button i");
+	
+		// Toggle menu active state
+		menu.classList.toggle("active");
+		button.classList.toggle("expanded");
+	
+		// Change icon direction
+		if (menu.classList.contains("active")) {
+			icon.classList.remove("icofont-rounded-right");
+			icon.classList.add("icofont-rounded-left");
+		} else {
+			icon.classList.remove("icofont-rounded-left");
+			icon.classList.add("icofont-rounded-right");
+		}
+	}
+	
+	
