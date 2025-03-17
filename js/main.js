@@ -343,20 +343,45 @@ Version:	1.1
         });
     });
 
+	//review index
 
-	//review page
-	let index = 0;
-    const track = document.querySelector(".carousel-track");
-    const reviewCards = document.querySelectorAll(".review-card").length;
-    const cardWidth = document.querySelector(".review-card").offsetWidth;
-    const visibleCards = 3; // Change to 1 for mobile view
-
-    function moveSlide(step) {
-      index += step;
-      if (index < 0) {
-        index = reviewCards - visibleCards;
-      } else if (index > reviewCards - visibleCards) {
-        index = 0;
-      }
-      track.style.transform = `translateX(-${index * (cardWidth + 20)}px)`;
-    }
+	document.addEventListener("DOMContentLoaded", function () {
+		const track = document.querySelector(".carousel-track");
+		const cards = document.querySelectorAll(".review-card");
+		const prevBtn = document.querySelector(".carousel-btn.left");
+		const nextBtn = document.querySelector(".carousel-btn.right");
+	
+		let index = 0;
+		let totalCards = cards.length;
+		let visibleCards = window.innerWidth < 768 ? 1 : 3; // Update visible cards based on screen size
+	
+		function updateSlide() {
+		  const cardWidth = cards[0].offsetWidth + 10; // Include gap spacing
+		  track.style.transform = `translateX(-${index * cardWidth}px)`;
+		}
+	
+		function moveSlide(step) {
+		  index += step;
+	
+		  // Prevent out-of-bound movements
+		  if (index < 0) {
+			index = 0;
+		  } else if (index > totalCards - visibleCards) {
+			index = totalCards - visibleCards;
+		  }
+	
+		  updateSlide();
+		}
+	
+		prevBtn.addEventListener("click", () => moveSlide(-1));
+		nextBtn.addEventListener("click", () => moveSlide(1));
+	
+		// Update visibleCards on window resize
+		window.addEventListener("resize", function () {
+		  visibleCards = window.innerWidth < 768 ? 1 : 3;
+		  index = 0; // Reset index to prevent misalignment
+		  updateSlide();
+		});
+	
+		updateSlide();
+	  });
