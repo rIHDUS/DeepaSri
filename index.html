@@ -49,6 +49,83 @@
   <!-- font awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 
+  <style>
+      /* Top Navbar */
+      .top-navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #004080;
+        color: white;
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .menu {
+        display: flex;
+        gap: 10px;
+        flex-wrap: nowrap;
+    }
+
+    .fancy-btn {
+        padding: 12px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        background: linear-gradient(45deg, blue, green);
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: 0.3s;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .fancy-btn i {
+        font-size: 18px;
+    }
+
+    .fancy-btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    }
+
+    /* Hide text on small screens */
+    @media (max-width: 768px) {
+        .top-navbar {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
+
+        .menu {
+            gap: 15px;
+        }
+
+        .fancy-btn {
+            font-size: 0; /* Hide text */
+            padding: 10px;
+            width: 45px; /* Make button square */
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .fancy-btn i {
+            font-size: 20px; /* Keep icon size */
+        }
+    }
+  </style>
+
 
 </head>
 
@@ -88,31 +165,14 @@
   <!-- Header Area -->
   <header class="header">
     <!-- Topbar -->
-    <div class="topbar">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 col-md-5 col-12">
-            <!-- Contact -->
-            <ul class="top-link">
-              <li><a href="about.html">About</a></li>
-              <li><a href="dotors.html">Doctors</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <!-- End Contact -->
-          </div>
-          <div class="col-lg-6 col-md-7 col-12">
-            <!-- Top Contact -->
-            <ul class="top-contact">
-              <li><i class="fa fa-phone"></i>+91-805022777</li>
-              <li>
-                <i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com">ravindraseganvi@gmail.com</a>
-              </li>
-            </ul>
-            <!-- End Top Contact -->
-          </div>
-        </div>
+    <div class="top-navbar">
+      <div class="logo">Your Logo</div>
+      <div class="menu">
+          <button class="fancy-btn"><i class="fas fa-calendar-check"></i> <span class="btn-text">Appointment</span></button>
+          <button class="fancy-btn"><i class="fas fa-triangle-exclamation"></i> <span class="btn-text">Emergency</span></button>
+          <button class="fancy-btn"><i class="fas fa-notes-medical"></i> <span class="btn-text">Book Appointment</span></button>
       </div>
-    </div>
+  </div>
     <!-- End Topbar -->
     <!-- Header Inner -->
     <div class="header-inner">
@@ -122,7 +182,7 @@
             <div class="col-lg-3 col-md-3 col-12">
               <!-- Start Logo -->
               <div class="logo">
-                <a href="index.html"><img src="img/Raksha_logo-Photoroom.png" alt="#" /></a>
+                <a href="index.html"><img src="img/raksha2-Photoroom.png" alt="#" /></a>
               </div>
               <!-- End Logo -->
               <!-- Mobile Nav -->
@@ -363,6 +423,7 @@
     <a href="tel:+1234567890" class="call-button" style="color: white;"><i class="icofont-ui-call"></i> Call Us</a>
   </div>
 
+<<<<<<< HEAD
   <<<<<<< HEAD <div class="contact-sidebar">
     <a href="https://wa.me/9307845862" target="_blank" class="contact-icon whatsapp-icon">
       <i class="fab fa-whatsapp"></i>
@@ -377,6 +438,8 @@
     </div>
     =======
     >>>>>>> a795d5dffe1f906d4c68e3a9a2cc762210b76ccc
+=======
+>>>>>>> 211737327f9d4d20e7b718e01c0ddf8eaa7adf52
 
     <!-- Start Schedule Area -->
     <section class="schedule">
