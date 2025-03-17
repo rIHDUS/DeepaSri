@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fancy Navbar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <style>
+        /* styles.css */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .menu {
+            display: flex;
+            gap: 10px;
+            flex-wrap: nowrap;
+            /* Prevents buttons from stacking */
+            justify-content: flex-end;
+            /* Aligns buttons properly */
+            overflow: hidden;
+            /* Prevents buttons from getting cut off */
+            max-width: 100%;
+        }
+
+        .fancy-btn {
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(45deg, #00dbde, #fc00ff);
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .fancy-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Responsive Fix */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: row;
+                flex-wrap: wrap;
+                padding: 10px;
+            }
+
+            .menu {
+                flex-wrap: nowrap;
+                justify-content: flex-end;
+                max-width: 100%;
+            }
+
+            .fancy-btn {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+        }
+    </style>
+    <nav class="navbar">
+        <div class="logo">Your Logo</div>
+        <div class="menu">
+            <button class="fancy-btn">Home</button>
+            <button class="fancy-btn">Services</button>
+            <button class="fancy-btn">Contact</button>
+        </div>
+    </nav>
+
+</body>
+
+</html>
