@@ -1,164 +1,338 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="zxx">
-    <head>
-        <!-- Meta Tags -->
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="keywords" content="Site keywords here">
-		<meta name="description" content="">
-		<meta name='copyright' content=''>
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		
-		<!-- Title -->
-        <title>Mediplus - Free Medical and Doctor Directory HTML Template.</title>
-		
-		<!-- Favicon -->
-        <link rel="icon" href="img/favicon.png">
-		
-		<!-- Google Fonts -->
-		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 
-		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<!-- Nice Select CSS -->
-		<link rel="stylesheet" href="css/nice-select.css">
-		<!-- Font Awesome CSS -->
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-		<!-- icofont CSS -->
-        <link rel="stylesheet" href="css/icofont.css">
-		<!-- Slicknav -->
-		<link rel="stylesheet" href="css/slicknav.min.css">
-		<!-- Owl Carousel CSS -->
-        <link rel="stylesheet" href="css/owl-carousel.css">
-		<!-- Datepicker CSS -->
-		<link rel="stylesheet" href="css/datepicker.css">
-		<!-- Animate CSS -->
-        <link rel="stylesheet" href="css/animate.min.css">
-		<!-- Magnific Popup CSS -->
-        <link rel="stylesheet" href="css/magnific-popup.css">
-		
-		<!-- Medipro CSS -->
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="css/responsive.css">
-		
-    </head>
-    <body>
-	
-		<!-- Preloader -->
-        <div class="preloader">
-            <div class="loader">
-                <div class="loader-outter"></div>
-                <div class="loader-inner"></div>
+<head>
+  <!-- Meta Tags -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="keywords" content="Site keywords here" />
+  <meta name="description" content="" />
+  <meta name="copyright" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-                <div class="indicator"> 
-                    <svg width="16px" height="12px">
-                        <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
-                        <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
-                    </svg>
-                </div>
-            </div>
+  <!-- Title -->
+  <title>Raksha Hospital</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.ico" />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+    rel="stylesheet" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <!-- Nice Select CSS -->
+  <link rel="stylesheet" href="css/nice-select.css" />
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <!-- icofont CSS -->
+  <link rel="stylesheet" href="css/icofont.css" />
+  <!-- Slicknav -->
+  <link rel="stylesheet" href="css/slicknav.min.css" />
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="css/owl-carousel.css" />
+  <!-- Datepicker CSS -->
+  <link rel="stylesheet" href="css/datepicker.css" />
+  <!-- Animate CSS -->
+  <link rel="stylesheet" href="css/animate.min.css" />
+  <!-- Magnific Popup CSS -->
+  <link rel="stylesheet" href="css/magnific-popup.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+
+  <!-- Medipro CSS -->
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+<style>
+  /* Floating Button */
+.floating-menu {
+	position: fixed;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	z-index: 9999;
+	transition: left 0.3s ease-in-out;
+	/* Smooth movement */
+}
+
+.menu-button {
+	background-color: #00c973;
+	color: white;
+	padding: 6px;
+	font-size: 12px;
+	/* Smaller text */
+	font-weight: bold;
+	border: none;
+	cursor: pointer;
+	writing-mode: vertical-rl;
+	text-align: center;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 3px;
+	height: 80px;
+	/* Reduced height */
+	width: 40px;
+	/* Reduced width */
+	transition: left 0.3s ease-in-out;
+	font-size: 14px;
+}
+
+.menu-button i {
+	font-size: 10px;
+	/* Smaller icon */
+}
+
+.menu-button:hover {
+	background-color: #00c973;
+}
+
+/* Side Menu Panel */
+.side-menu {
+	position: fixed;
+	top: 50%;
+	left: -180px;
+	/* Smaller menu width */
+	transform: translateY(-50%);
+	width: 180px;
+	background: white;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+	transition: left 0.3s ease-in-out;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+	padding: 5px;
+	overflow: visible;
+}
+
+/* When menu opens */
+.side-menu.active {
+	left: 0;
+}
+
+/* Adjust button position when menu is open */
+.floating-menu.expanded {
+	left: 180px;
+}
+
+/* Menu links */
+.side-menu a {
+	display: flex;
+	align-items: center;
+	padding: 8px;
+	/* Smaller padding */
+	text-decoration: none;
+	color: #00c973;
+	font-weight: bold;
+	border-bottom: 1px solid #eee;
+	transition: 0.3s;
+	font-size: 12px;
+	/* Smaller font */
+}
+
+.side-menu a i {
+	margin-right: 6px;
+	/* Reduced spacing */
+	font-size: 12px;
+	/* Smaller icons */
+}
+
+.side-menu a:hover {
+	background: #f1f1f1;
+}
+
+/* Call Us Button */
+.call-button {
+	display: block;
+	background-color: #00c973;
+	color: white;
+	text-align: center;
+	padding: 8px;
+	margin-top: 6px;
+	border-radius: 4px;
+	font-weight: bold;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.call-button:hover {
+	background-color: #00306f;
+}
+
+.floating-menu,
+.side-menu {
+	position: fixed !important;
+	z-index: 9999 !important;
+	display: block !important;
+	visibility: visible !important;
+	opacity: 1 !important;
+}
+
+</style>
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="loader">
+      <div class="loader-outter"></div>
+      <div class="loader-inner"></div>
+
+      <div class="indicator">
+        <svg width="16px" height="12px">
+          <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+          <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <!-- End Preloader -->
+
+
+  <!-- Header Area -->
+  <header class="header">
+    <!-- Topbar -->
+    <div class="topbar">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-5 col-12">
+            <!-- Contact -->
+            <ul class="top-link">
+              <li><a href="about.html">About</a></li>
+              <li><a href="dotors.html">Doctors</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <!-- End Contact -->
+          </div>
+          <div class="col-lg-6 col-md-7 col-12">
+            <!-- Top Contact -->
+            <ul class="top-contact">
+              <li><i class="fa fa-phone"></i>+91-805022777</li>
+              <li>
+                <i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com">ravindraseganvi@gmail.com</a>
+              </li>
+            </ul>
+            <!-- End Top Contact -->
+          </div>
         </div>
-        <!-- End Preloader -->
-		
-		<!-- Get Pro Button -->
-		<ul class="pro-features">
-			<a class="get-pro" href="#">Get Pro</a>
-			<li class="big-title">Pro Version Available on Themeforest</li>
-			<li class="title">Pro Version Features</li>
-			<li>2+ premade home pages</li>
-			<li>20+ html pages</li>
-			<li>Color Plate With 12+ Colors</li>
-			<li>Sticky Header / Sticky Filters</li>
-			<li>Working Contact Form With Google Map</li>
-			<div class="button">
-				<a href="http://preview.themeforest.net/item/mediplus-medical-and-doctor-html-template/full_screen_preview/26665910?_ga=2.145092285.888558928.1591971968-344530658.1588061879" target="_blank" class="btn">Pro Version Demo</a>
-				<a href="https://themeforest.net/item/mediplus-medical-and-doctor-html-template/26665910" target="_blank" class="btn">Buy Pro Version</a>
-			</div>
-		</ul>
-	
-		<!-- Header Area -->
-		<header class="header" >
-			<!-- Topbar -->
-			<div class="topbar">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-6 col-md-5 col-12">
-							<!-- Contact -->
-							<ul class="top-link">
-								<li><a href="#">About</a></li>
-								<li><a href="#">Doctors</a></li>
-								<li><a href="#">Contact</a></li>
-								<li><a href="#">FAQ</a></li>
-							</ul>
-							<!-- End Contact -->
-						</div>
-						<div class="col-lg-6 col-md-7 col-12">
-							<!-- Top Contact -->
-							<ul class="top-contact">
-								<li><i class="fa fa-phone"></i>+880 1234 56789</li>
-								<li><i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com">support@yourmail.com</a></li>
-							</ul>
-							<!-- End Top Contact -->
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- End Topbar -->
-			<!-- Header Inner -->
-			<div class="header-inner">
-				<div class="container">
-					<div class="inner">
-						<div class="row">
-							<div class="col-lg-3 col-md-3 col-12">
-								<!-- Start Logo -->
-								<div class="logo">
-									<a href="index.html"><img src="img/logo.png" alt="#"></a>
-								</div>
-								<!-- End Logo -->
-								<!-- Mobile Nav -->
-								<div class="mobile-nav"></div>
-								<!-- End Mobile Nav -->
-							</div>
-							<div class="col-lg-7 col-md-9 col-12">
-								<!-- Main Menu -->
-								<div class="main-menu">
-									<nav class="navigation">
-										<ul class="nav menu">
-											<li class="active"><a href="#">Home <i class="icofont-rounded-down"></i></a>
-												<ul class="dropdown">
-													<li><a href="index.html">Home Page 1</a></li>
-												</ul>
-											</li>
-											<li><a href="#">Doctos </a></li>
-											<li><a href="#">Services </a></li>
-											<li><a href="#">Pages <i class="icofont-rounded-down"></i></a>
-												<ul class="dropdown">
-													<li><a href="404.html">404 Error</a></li>
-												</ul>
-											</li>
-											<li><a href="#">Blogs <i class="icofont-rounded-down"></i></a>
-												<ul class="dropdown">
-													<li><a href="blog-single.html">Blog Details</a></li>
-												</ul>
-											</li>
-											<li><a href="contact.html">Contact Us</a></li>
-										</ul>
-									</nav>
-								</div>
-								<!--/ End Main Menu -->
-							</div>
-							<div class="col-lg-2 col-12">
-								<div class="get-quote">
-									<a href="appointment.html" class="btn">Book Appointment</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--/ End Header Inner -->
-		</header>
+      </div>
+    </div>
+    <!-- End Topbar -->
+    <!-- Header Inner -->
+    <div class="header-inner">
+      <div class="container">
+        <div class="inner">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-12">
+              <!-- Start Logo -->
+              <div class="logo">
+                <a href="index.html"><img src="img/Raksha_logo-Photoroom.png" alt="#" /></a>
+              </div>
+              <!-- End Logo -->
+              <!-- Mobile Nav -->
+              <div class="mobile-nav"></div>
+              <!-- End Mobile Nav -->
+            </div>
+            <div class="col-lg-7 col-md-9 col-12">
+              <!-- Main Menu -->
+              <div class="main-menu">
+                <nav class="navigation">
+                  <ul class="nav menu">
+                    <li class="active">
+                      <a href="index.html">Home </a>
+
+                    </li>
+                    <li><a href="dotors.html">Doctors </a></li>
+
+                    <li>
+                      <a href="#">Specialities <i class="icofont-rounded-down"></i></a>
+
+                      <ul class="dropdown">
+                        <div class="row">
+                          <div class="">
+                            <li><a href="Diseases/Obstetrics _Gynaecology.html"><img src="img/oro.webp" alt=""
+                                  width="13%">Obstetrics & Gynaecology</a></li>
+                            <li><a href="Diseases/general_surgery.html"><img src="img/general-sur-icon.webp" alt=""
+                                  width="13%"> General Surgery</a>
+                            </li>
+                            <li><a href="Diseases/general_medicine.html"><img src="img/gene-icon.webp" alt=""
+                                  width="13%"> General Medicine</a></li>
+                            <li><a href="Diseases/urology.html"><img src="img/urology-icon.webp" alt="" width="13%">
+                                Urology</a></li>
+                            <li><a href="Diseases/skin_cosmetology.html"><img src="img/derma-icon.webp" alt=""
+                                  width="13%"> Skin and
+                                Cosmetology</a></li>
+                            <li><a href="Diseases/diabetology.html"><img src="img/diabetes-icon.webp" alt=""
+                                  width="13%">Diabetology</a></li>
+                          </div>
+
+                          
+
+
+                        </div>
+                      </ul>
+
+                    </li>
+
+                    <li>
+                      <a href="healthCheckups.html">Health Check Up </a>
+                      <!-- <ul class="dropdown">
+                        <li><a href="404.html">404 Error</a>
+                        </li>
+
+                        <li><a href="demo1.html">Gallary</a></li>
+                        <li><a href="demo2.html">Demo Page 2</a></li>
+                        <li><a href="demo3.html">Demo Page 3</a></li>
+                        <li><a href="demo4.html">Demo Page 4</a></li>
+                        <li><a href="demo5.html">Demo Page 5</a></li>
+                        <li><a href="demo6.html">Demo Page 6</a></li>
+                        <li><a href="demo7.html">Demo Page 7</a></li>
+                        <li><a href="demo8.html">Demo Page 8</a></li>
+                        <li><a href="demo9.html">Demo Page 9</a></li>
+                        <li><a href="demo10.html">Demo Page 10</a></li>
+
+                      </ul> -->
+                    </li>
+                    <li><a href="blog.html">Blogs </a></li>
+
+                    <li>
+                      <a href="#">Pages <i class="icofont-rounded-down"></i></a>
+                      <ul class="dropdown">
+
+
+                        <li><a href="gallery.html">Gallary</a></li>
+                        <li><a href="insights.html">Insights</a></li>
+                        <li><a href="Appointment.html">Appointment</a></li>
+                        <li><a href="dotors.html">Find Doctor</a></li>
+
+
+                      </ul>
+                    </li>
+
+                    
+                      </li> 
+                  </ul>
+                </nav>
+              </div>
+
+              <!--/ End Main Menu -->
+            </div>
+            <div class="col-lg-2 col-12">
+              <div class="get-quote">
+                <a href="appointment.html" class="btn">Book Appointment</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ End Header Inner -->
+  </header>
 		<!-- End Header Area -->
 		
 		<!-- Error Page -->

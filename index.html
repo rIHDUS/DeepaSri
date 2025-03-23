@@ -46,7 +46,134 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="css/responsive.css" />
 
+<style>
+  /* Floating Button */
+.floating-menu {
+	position: fixed;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	z-index: 9999;
+	transition: left 0.3s ease-in-out;
+	/* Smooth movement */
+}
 
+.menu-button {
+	background-color: #00c973;
+	color: white;
+	padding: 6px;
+	font-size: 12px;
+	/* Smaller text */
+	font-weight: bold;
+	border: none;
+	cursor: pointer;
+	writing-mode: vertical-rl;
+	text-align: center;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 3px;
+	height: 80px;
+	/* Reduced height */
+	width: 40px;
+	/* Reduced width */
+	transition: left 0.3s ease-in-out;
+	font-size: 14px;
+}
+
+.menu-button i {
+	font-size: 10px;
+	/* Smaller icon */
+}
+
+.menu-button:hover {
+	background-color: #00c973;
+}
+
+/* Side Menu Panel */
+.side-menu {
+	position: fixed;
+	top: 50%;
+	left: -180px;
+	/* Smaller menu width */
+	transform: translateY(-50%);
+	width: 180px;
+	background: white;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+	transition: left 0.3s ease-in-out;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+	padding: 5px;
+	overflow: visible;
+}
+
+/* When menu opens */
+.side-menu.active {
+	left: 0;
+}
+
+/* Adjust button position when menu is open */
+.floating-menu.expanded {
+	left: 180px;
+}
+
+/* Menu links */
+.side-menu a {
+	display: flex;
+	align-items: center;
+	padding: 8px;
+	/* Smaller padding */
+	text-decoration: none;
+	color: #00c973;
+	font-weight: bold;
+	border-bottom: 1px solid #eee;
+	transition: 0.3s;
+	font-size: 12px;
+	/* Smaller font */
+}
+
+.side-menu a i {
+	margin-right: 6px;
+	/* Reduced spacing */
+	font-size: 12px;
+	/* Smaller icons */
+}
+
+.side-menu a:hover {
+	background: #f1f1f1;
+}
+
+/* Call Us Button */
+.call-button {
+	display: block;
+	background-color: #00c973;
+	color: white;
+	text-align: center;
+	padding: 8px;
+	margin-top: 6px;
+	border-radius: 4px;
+	font-weight: bold;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.call-button:hover {
+	background-color: #00306f;
+}
+
+.floating-menu,
+.side-menu {
+	position: fixed !important;
+	z-index: 9999 !important;
+	display: block !important;
+	visibility: visible !important;
+	opacity: 1 !important;
+}
+
+</style>
 </head>
 
 <body>
@@ -66,21 +193,6 @@
   </div>
   <!-- End Preloader -->
 
-  <!-- Get Pro Button -->
-  <!-- <ul class="pro-features">
-			<a class="get-pro" href="#">Get Pro</a>
-			<li class="big-title">Pro Version Available on Themeforest</li>
-			<li class="title">Pro Version Features</li>
-			<li>2+ premade home pages</li>
-			<li>20+ html pages</li>
-			<li>Color Plate With 12+ Colors</li>
-			<li>Sticky Header / Sticky Filters</li>
-			<li>Working Contact Form With Google Map</li>
-			<div class="button">
-				<a href="http://preview.themeforest.net/item/mediplus-medical-and-doctor-html-template/full_screen_preview/26665910?_ga=2.145092285.888558928.1591971968-344530658.1588061879" target="_blank" class="btn">Pro Version Demo</a>
-				<a href="https://themeforest.net/item/mediplus-medical-and-doctor-html-template/26665910" target="_blank" class="btn">Buy Pro Version</a>
-			</div>
-		</ul> -->
 
   <!-- Header Area -->
   <header class="header">
@@ -142,7 +254,7 @@
 
                       <ul class="dropdown">
                         <div class="row">
-                          <div class="col-sm-6 col-lg-4">
+                          <div class="">
                             <li><a href="Diseases/Obstetrics _Gynaecology.html"><img src="img/oro.webp" alt=""
                                   width="13%">Obstetrics & Gynaecology</a></li>
                             <li><a href="Diseases/general_surgery.html"><img src="img/general-sur-icon.webp" alt=""
@@ -158,38 +270,8 @@
                             <li><a href="Diseases/diabetology.html"><img src="img/diabetes-icon.webp" alt=""
                                   width="13%">Diabetology</a></li>
                           </div>
-                          <div class="col-sm-6 col-lg-4">
-                            <li><a href="Diseases/pediatrics.html"><img src="img/pedi-icon.webp" alt="" width="13%">
-                                Paediatrics</a>
-                            </li>
-                            <li><a href="Diseases/orthopedics.html"><img src="img/ortho-icon.webp" alt=""
-                                  width="13%">Orthopedics</a></li>
-                            <li><a href="Diseases/ent.html"><img src="img/ent-icon.webp" alt="" width="13%"> ENT</a>
-                            </li>
-                            <li><a href="Diseases/ophthalmology.html"><img src="img/opth-icon.webp" alt=""
-                                  width="13%">Ophthalmology</a>
-                            </li>
-                            <li><a href="Diseases/cardiology.html"><img src="img/cardiology-icon.webp" alt=""
-                                  width="13%"> Cardiology</a></li>
-                            <li><a href="Diseases/High_Risk_Pregnance.html"><img src="img/oro.webp" alt="" width="13%">
-                                High-risk Pregnancy
-                                Care</a></li>
-                          </div>
-                          <div class="col-sm-6 col-lg-4">
-                            <li><a href="Diseases/oncology.html"><img src="img/onco-icon.webp" alt="" width="13%">
-                                Oncology</a></li>
-                            <li><a href="Diseases/pulmonology.html"><img src="img/pul-icon.webp" alt="" width="13%">
-                                Pulmonology</a>
-                            </li>
-                            <li><a href="Diseases/vascular.html"><img src="img/vascular-icon.webp" alt="" width="13%">
-                                Vascular &
-                                Endovascular Surgery</a></li>
-                            <li><a href="Diseases/Nephrology.html"><img src="img/nephrology-icon.webp" alt=""
-                                  width="13%"> Nephrology</a></li>
-                            <li><a href="Diseases/gastroentrology.html"><img src="img/surgical-icon.webp" alt=""
-                                  width="13%">
-                                Gastroenterology</a></li>
-                          </div>
+
+                          
 
 
                         </div>
@@ -232,14 +314,8 @@
                       </ul>
                     </li>
 
-                    <!-- <li>
-                        <a href="#"
-                          >Blogs <i class="icofont-rounded-down"></i
-                        ></a>
-                        <ul class="dropdown">
-                          <li><a href="blog-single.html">Blog Details</a></li>
-                        </ul>
-                      </li> -->
+                    
+                      </li> 
                   </ul>
                 </nav>
               </div>
@@ -257,16 +333,17 @@
     </div>
     <!--/ End Header Inner -->
   </header>
-  <!-- End Header Area -->
+
+  
 
   <!-- Slider Area -->
   <section class="slider">
     <div class="hero-slider">
       <!-- Start Single Slider -->
-      <div class="single-slider" style="background-image: url('img/slider2.jpg')">
+      <div class="single-slider" style="background-color:rgb(233, 240, 243);">
         <div class="container">
           <div class="row">
-            <div class="col-lg-7">
+            <div class="col-lg-12">
               <div class="text">
                 <h1>
                   Excellence in <span>healthcare</span> , with you at the
@@ -289,7 +366,7 @@
       </div>
       <!-- End Single Slider -->
       <!-- Start Single Slider -->
-      <div class="single-slider" style="background-image: url('img/slider.jpg')">
+      <div class="single-slider" style="background-color:rgb(233, 240, 243);">
         <div class="container">
           <div class="row">
             <div class="col-lg-7">
@@ -315,7 +392,7 @@
       </div>
       <!-- Start End Slider -->
       <!-- Start Single Slider -->
-      <div class="single-slider" style="background-image: url('img/slider3.jpg')">
+      <div class="single-slider" style="background-color:rgb(233, 240, 243);">
         <div class="container">
           <div class="row">
             <div class="col-lg-7">
@@ -343,6 +420,43 @@
     </div>
   </section>
   <!--/ End Slider Area -->
+
+  <div class="floating-menu" id="floatingMenu">
+    <button class="menu-button" onclick="toggleMenu()" id="menuButton">
+      Book <i class="icofont-rounded-right"></i>
+    </button>
+  </div>
+
+  <!-- Slide-Out Side Menu -->
+  <div class="side-menu" id="sideMenu">
+    <a href="#"><i class="icofont-ui-calendar"></i> Appointment</a>
+    <a href="#"><i class="icofont-heart-beat"></i> Health Check</a>
+    <!-- <a href="#"><i class="icofont-home"></i> Home Care</a> -->
+    <a href="#"><i class="icofont-earth"></i> Contact Us</a>
+    <a href="#"><i class="icofont-star"></i> Review Us</a>
+    <a href="tel:+1234567890" class="call-button" style="color: white;"><i class="icofont-ui-call"></i> Call Us</a>
+  </div>
+
+
+  <div class="contact-sidebar">
+  <a href="tel:+91 9307845862" class="contact-icon phone-icon">
+          <i class="fas fa-phone"></i>
+        </a>
+        <a
+          href="https://wa.me/9307845862"
+          target="_blank"
+          class="contact-icon whatsapp-icon"
+        >
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        
+        <a
+          href="mailto:healabspharma@gmail.com"
+          class="contact-icon email-icon"
+        >
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
 
   <!-- Start Schedule Area -->
   <section class="schedule">
@@ -1216,195 +1330,217 @@
     </div>
   </section>
 
-
-
-
-
-
-  <!-- /End Newsletter Area -->
-
-  <!-- Footer Area -->
-  <footer id="footer" class="footer">
-    <!-- Footer Top -->
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-6 col-12">
-            <div class="single-footer">
-              <h2>About Us</h2>
-              <div class="logo">
-                <a href="index.html"><img style="border-radius: 20px; padding-bottom: 10px;"
-                    src="img/Raksha_logo-Photoroom.png" alt="#" /></a>
-              </div>
-              <p>
-                At Raksha Hospital, we are always ready to care for you and your family with compassion and expertise.
-              </p>
-              <!-- Social -->
-
-              <!-- End Social -->
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-12">
-            <div class="single-footer f-link">
-              <h2>Quick Links</h2>
-              <div class="row">
-                <div class="col-lg-6 col-md-6 col-12">
-                  <ul>
-                    <li>
-                      <a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Services</a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Our Doctors</a>
-                    </li>
-                    <!-- <li>
-                      <a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Other Links</a>
-                    </li> -->
-                  </ul>
-                </div>
-                <div class="col-lg-6 col-md-6 col-12">
-                  <ul>
-                    <!-- <li>
-                      <a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Consuling</a>
-                    </li> -->
-                    <li>
-                      <a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Specialities</a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Testimonials</a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Gallary</a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Contact Us</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Services -->
-          <div class="col-lg-3 col-md-6 col-12" style="padding-left: 3%;">
-            <div class="single-footer f-link">
-              <h2>Services</h2>
-              <div class="row">
-                <div class="col-lg-6 col-md-6 col-12">
-                  <ul style="list-style-type: circle;">
-                    <li style="color: white;">Cardiology</li>
-                    <li style="color: white;">Neurology</li>
-                    <li style="color: white;">Orthopedics</li>
-                    <li style="color: white;">Nephrology</li>
-                    <li style="color: white;">Urology</li>
-                  </ul>
-
-                </div>
-                <div class="col-lg-6 col-md-6 col-12">
-                  <ul style="list-style-type: disc;">
-                    <li style="color: white;">Oncology</li>
-                    <li style="color: white;">Gastroenterology</li>
-                    <li style="color: white;">Pulmonology</li>
-                    <li style="color: white;">Dermatology</li>
-                    <li style="color: white;">Pediatrics</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- End Services-->
-          <!--Contact -->
-          <div class="col-lg-3 col-md-6 col-12">
-            <div class="single-footer" style="color: white; padding-left: 5px;">
-              <h2>Contact Us</h2>
-              <ul class="contact-info">
-                <li><i class="icofont-phone"></i> +91-805022777</li>
-                <li><i class="icofont-email"></i> ravindraseganvi@gmail.com</li>
-                <li><i class="icofont-location-pin"></i> Nisarga Complex, 24/A, Kudlu Main Rd, near Venkateswara Temple,
-                  Kudlu, VGP Layout, Bengaluru, Karnataka 560068</li>
-              </ul>
-              <!-- Social Links -->
-              <ul class="social">
-                <li><a href="https://www.facebook.com/rakshahospital"><i class="icofont-facebook"></i></a></li>
-                <li><a href="https://twitter.com/rakshahospital"><i class="icofont-twitter"></i></a></li>
-                <li><a href="https://www.instagram.com/rakshahospital"><i class="icofont-instagram"></i></a></li>
-                <li><a href="https://www.linkedin.com/company/rakshahospital"><i class="icofont-linkedin"></i></a></li>
-              </ul>
-              <!-- End Social Links -->
-            </div>
-          </div>
-
-          <!-- end contact -->
-        </div>
-      </div>
-    </div>
-    <!--/ End Footer Top -->
-    <!-- Copyright -->
-    <div class="copyright">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 col-md-12 col-12">
-            <div class="copyright-content">
-              <p>
-                © Copyright 2018 | All Rights Reserved by
-                <a href="https://www.wpthemesgrid.com" target="_blank">rakshahospital.com</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--/ End Copyright -->
-  </footer>
-  <!--/ End Footer Area -->
-
-  <!-- jquery Min JS -->
-  <script src="js/jquery.min.js"></script>
-  <!-- jquery Migrate JS -->
-  <script src="js/jquery-migrate-3.0.0.js"></script>
-  <!-- jquery Ui JS -->
-  <script src="js/jquery-ui.min.js"></script>
-  <!-- Easing JS -->
-  <script src="js/easing.js"></script>
-  <!-- Color JS -->
-  <script src="js/colors.js"></script>
-  <!-- Popper JS -->
-  <script src="js/popper.min.js"></script>
-  <!-- Bootstrap Datepicker JS -->
-  <script src="js/bootstrap-datepicker.js"></script>
-  <!-- Jquery Nav JS -->
-  <script src="js/jquery.nav.js"></script>
-  <!-- Slicknav JS -->
-  <script src="js/slicknav.min.js"></script>
-  <!-- ScrollUp JS -->
-  <script src="js/jquery.scrollUp.min.js"></script>
-  <!-- Niceselect JS -->
-  <script src="js/niceselect.js"></script>
-  <!-- Tilt Jquery JS -->
-  <script src="js/tilt.jquery.min.js"></script>
-  <!-- Owl Carousel JS -->
-  <script src="js/owl-carousel.js"></script>
-  <!-- counterup JS -->
-  <script src="js/jquery.counterup.min.js"></script>
-  <!-- Steller JS -->
-  <script src="js/steller.js"></script>
-  <!-- Wow JS -->
-  <script src="js/wow.min.js"></script>
-  <!-- Magnific Popup JS -->
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <!-- Counter Up CDN JS -->
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-  <!-- Bootstrap JS -->
-  <script src="js/bootstrap.min.js"></script>
-  <!-- Main JS -->
-  <script src="js/main.js"></script>
-  <!-- my js -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   
+ <!-- Footer Area -->
+ <footer id="footer" class="footer">
+  <!-- Footer Top -->
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-12">
+          <div class="single-footer">
+            <h2>About Us</h2>
+            <div class="logo">
+              <a href="index.html"><img style="border-radius: 20px; padding-bottom: 10px;"
+                  src="img/Raksha_logo-Photoroom.png" alt="#" /></a>
+            </div>
+            <p>
+              At Raksha Hospital, we are always ready to care for you and your family with compassion and expertise.
+            </p>
+            <!-- Social -->
+
+            <!-- End Social -->
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-12">
+          <div class="single-footer f-link">
+            <h2>Quick Links</h2>
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-12">
+                <ul>
+                  <li>
+                    <a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Services</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Our Doctors</a>
+                  </li>
+                  <!-- <li>
+                    <a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Other Links</a>
+                  </li> -->
+                </ul>
+              </div>
+              <div class="col-lg-6 col-md-6 col-12">
+                <ul>
+                  <!-- <li>
+                    <a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Consuling</a>
+                  </li> -->
+                  <li>
+                    <a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Specialities</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Testimonials</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Gallary</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Services -->
+        <div class="col-lg-3 col-md-6 col-12" style="padding-left: 3%;">
+          <div class="single-footer f-link">
+            <h2>Services</h2>
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-12">
+                <ul style="list-style-type: circle;">
+                  <li style="color: white;">Cardiology</li>
+                  <li style="color: white;">Neurology</li>
+                  <li style="color: white;">Orthopedics</li>
+                  <li style="color: white;">Nephrology</li>
+                  <li style="color: white;">Urology</li>
+                </ul>
+
+              </div>
+              <div class="col-lg-6 col-md-6 col-12">
+                <ul style="list-style-type: disc;">
+                  <li style="color: white;">Oncology</li>
+                  <li style="color: white;">Gastroenterology</li>
+                  <li style="color: white;">Pulmonology</li>
+                  <li style="color: white;">Dermatology</li>
+                  <li style="color: white;">Pediatrics</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Services-->
+        <!--Contact -->
+        <div class="col-lg-3 col-md-6 col-12">
+          <div class="single-footer" style="color: white; padding-left: 5px;">
+            <h2>Contact Us</h2>
+            <ul class="contact-info">
+              <li><i class="icofont-phone"></i> +91-805022777</li>
+              <li><i class="icofont-email"></i> ravindraseganvi@gmail.com</li>
+              <li><i class="icofont-location-pin"></i> Nisarga Complex, 24/A, Kudlu Main Rd, near Venkateswara Temple,
+                Kudlu, VGP Layout, Bengaluru, Karnataka 560068</li>
+            </ul>
+            <!-- Social Links -->
+            <ul class="social">
+              <li><a href="https://www.facebook.com/rakshahospital"><i class="icofont-facebook"></i></a></li>
+              <li><a href="https://twitter.com/rakshahospital"><i class="icofont-twitter"></i></a></li>
+              <li><a href="https://www.instagram.com/rakshahospital"><i class="icofont-instagram"></i></a></li>
+              <li><a href="https://www.linkedin.com/company/rakshahospital"><i class="icofont-linkedin"></i></a></li>
+            </ul>
+            <!-- End Social Links -->
+          </div>
+        </div>
+
+        <!-- end contact -->
+      </div>
+    </div>
+  </div>
+  <!--/ End Footer Top -->
+  <!-- Copyright -->
+  <div class="copyright">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-12">
+          <div class="copyright-content">
+            <p>
+              © Copyright 2018 | All Rights Reserved by
+              <a href="https://www.wpthemesgrid.com" target="_blank">rakshahospital.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ End Copyright -->
+</footer>
+<!--/ End Footer Area -->
+
+<!-- jquery Min JS -->
+<script src="js/jquery.min.js"></script>
+<!-- jquery Migrate JS -->
+<script src="js/jquery-migrate-3.0.0.js"></script>
+<!-- jquery Ui JS -->
+<script src="js/jquery-ui.min.js"></script>
+<!-- Easing JS -->
+<script src="js/easing.js"></script>
+<!-- Color JS -->
+<script src="js/colors.js"></script>
+<!-- Popper JS -->
+<script src="js/popper.min.js"></script>
+<!-- Bootstrap Datepicker JS -->
+<script src="js/bootstrap-datepicker.js"></script>
+<!-- Jquery Nav JS -->
+<script src="js/jquery.nav.js"></script>
+<!-- Slicknav JS -->
+<script src="js/slicknav.min.js"></script>
+<!-- ScrollUp JS -->
+<script src="js/jquery.scrollUp.min.js"></script>
+<!-- Niceselect JS -->
+<script src="js/niceselect.js"></script>
+<!-- Tilt Jquery JS -->
+<script src="js/tilt.jquery.min.js"></script>
+<!-- Owl Carousel JS -->
+<script src="js/owl-carousel.js"></script>
+<!-- counterup JS -->
+<script src="js/jquery.counterup.min.js"></script>
+<!-- Steller JS -->
+<script src="js/steller.js"></script>
+<!-- Wow JS -->
+<script src="js/wow.min.js"></script>
+<!-- Magnific Popup JS -->
+<script src="js/jquery.magnific-popup.min.js"></script>
+<!-- Counter Up CDN JS -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="js/bootstrap.min.js"></script>
+<!-- Main JS -->
+<script src="js/main.js"></script>
+<!-- my js -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<SCRipt>
+  //book toggle button
+  function toggleMenu() {
+  let menu = document.getElementById("sideMenu");
+  let button = document.getElementById("floatingMenu");
+  let icon = document.querySelector(".menu-button i");
+
+  // Toggle menu active state
+  menu.classList.toggle("active");
+  button.classList.toggle("expanded");
+
+  // Change icon direction
+  if (menu.classList.contains("active")) {
+    icon.classList.remove("icofont-rounded-right");
+    icon.classList.add("icofont-rounded-left");
+  } else {
+    icon.classList.remove("icofont-rounded-left");
+    icon.classList.add("icofont-rounded-right");
+  }
+}
+</SCRipt>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
+
+
+
+
+
+ 

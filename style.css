@@ -432,9 +432,9 @@ body{
 /* Dropdown Menu */
 .header .nav li .dropdown {
 	background: #fff;
-	width: 1000px;
+	width: 300px;
 	position: absolute;
-	left:-300px;
+	left:-100px;
 	top: 100%;
 	z-index: 999;
 	-webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
@@ -4335,6 +4335,133 @@ body{
         width: 100%;
     }
 }
-/* gallary */
 
+
+
+
+/* Floating Button */
+.floating-menu {
+	position: fixed;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	z-index: 9999;
+	transition: left 0.3s ease-in-out;
+	/* Smooth movement */
+}
+
+.menu-button {
+	background-color: #00c973;
+	color: white;
+	padding: 6px;
+	font-size: 12px;
+	/* Smaller text */
+	font-weight: bold;
+	border: none;
+	cursor: pointer;
+	writing-mode: vertical-rl;
+	text-align: center;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 3px;
+	height: 80px;
+	/* Reduced height */
+	width: 40px;
+	/* Reduced width */
+	transition: left 0.3s ease-in-out;
+	font-size: 14px;
+}
+
+.menu-button i {
+	font-size: 10px;
+	/* Smaller icon */
+}
+
+.menu-button:hover {
+	background-color: #00c973;
+}
+
+/* Side Menu Panel */
+.side-menu {
+	position: fixed;
+	top: 50%;
+	left: -180px;
+	/* Smaller menu width */
+	transform: translateY(-50%);
+	width: 180px;
+	background: white;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+	transition: left 0.3s ease-in-out;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+	padding: 5px;
+	overflow: visible;
+}
+
+/* When menu opens */
+.side-menu.active {
+	left: 0;
+}
+
+/* Adjust button position when menu is open */
+.floating-menu.expanded {
+	left: 180px;
+}
+
+/* Menu links */
+.side-menu a {
+	display: flex;
+	align-items: center;
+	padding: 8px;
+	/* Smaller padding */
+	text-decoration: none;
+	color: #00c973;
+	font-weight: bold;
+	border-bottom: 1px solid #eee;
+	transition: 0.3s;
+	font-size: 12px;
+	/* Smaller font */
+}
+
+.side-menu a i {
+	margin-right: 6px;
+	/* Reduced spacing */
+	font-size: 12px;
+	/* Smaller icons */
+}
+
+.side-menu a:hover {
+	background: #f1f1f1;
+}
+
+/* Call Us Button */
+.call-button {
+	display: block;
+	background-color: #00c973;
+	color: white;
+	text-align: center;
+	padding: 8px;
+	margin-top: 6px;
+	border-radius: 4px;
+	font-weight: bold;
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.call-button:hover {
+	background-color: #00306f;
+}
+
+.floating-menu,
+.side-menu {
+	position: fixed !important;
+	z-index: 9999 !important;
+	display: block !important;
+	visibility: visible !important;
+	opacity: 1 !important;
+}
 
