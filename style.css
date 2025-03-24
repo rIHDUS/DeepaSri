@@ -252,11 +252,11 @@ body{
 }
 /* Topbar */
 .header .topbar{
-	background-color:#fff;
-	border-bottom:1px solid #eee;
+	background-color:#00c973;
+	
 }
 .header .topbar{
-	padding:15px 0;
+	padding:10px 0;
 }
 .header .top-link{
 	float:left;
@@ -294,7 +294,7 @@ body{
 	color:#1A76D1;
 }
 .header .top-contact li i{
-	color:#1A76D1;
+	color:#fff;
 	margin-right:8px;
 }
 .header .header-inner {
@@ -4216,7 +4216,7 @@ body{
 
   .reviews-section {
     padding: 40px 0;
-    background-color: #f9f9f9;
+    background-color: #e4f8ff;
     text-align: center;
 }
 
