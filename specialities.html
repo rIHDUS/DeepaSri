@@ -46,134 +46,6 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="css/responsive.css" />
 
-<style>
-  /* Floating Button */
-.floating-menu {
-	position: fixed;
-	top: 50%;
-	left: 0;
-	transform: translateY(-50%);
-	z-index: 9999;
-	transition: left 0.3s ease-in-out;
-	/* Smooth movement */
-}
-
-.menu-button {
-	background-color: #00c973;
-	color: white;
-	padding: 6px;
-	font-size: 12px;
-	/* Smaller text */
-	font-weight: bold;
-	border: none;
-	cursor: pointer;
-	writing-mode: vertical-rl;
-	text-align: center;
-	border-top-right-radius: 8px;
-	border-bottom-right-radius: 8px;
-	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 3px;
-	height: 80px;
-	/* Reduced height */
-	width: 40px;
-	/* Reduced width */
-	transition: left 0.3s ease-in-out;
-	font-size: 14px;
-}
-
-.menu-button i {
-	font-size: 10px;
-	/* Smaller icon */
-}
-
-.menu-button:hover {
-	background-color: #00c973;
-}
-
-/* Side Menu Panel */
-.side-menu {
-	position: fixed;
-	top: 50%;
-	left: -180px;
-	/* Smaller menu width */
-	transform: translateY(-50%);
-	width: 180px;
-	background: white;
-	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-	transition: left 0.3s ease-in-out;
-	border-top-right-radius: 6px;
-	border-bottom-right-radius: 6px;
-	padding: 5px;
-	overflow: visible;
-}
-
-/* When menu opens */
-.side-menu.active {
-	left: 0;
-}
-
-/* Adjust button position when menu is open */
-.floating-menu.expanded {
-	left: 180px;
-}
-
-/* Menu links */
-.side-menu a {
-	display: flex;
-	align-items: center;
-	padding: 8px;
-	/* Smaller padding */
-	text-decoration: none;
-	color: #00c973;
-	font-weight: bold;
-	border-bottom: 1px solid #eee;
-	transition: 0.3s;
-	font-size: 12px;
-	/* Smaller font */
-}
-
-.side-menu a i {
-	margin-right: 6px;
-	/* Reduced spacing */
-	font-size: 12px;
-	/* Smaller icons */
-}
-
-.side-menu a:hover {
-	background: #f1f1f1;
-}
-
-/* Call Us Button */
-.call-button {
-	display: block;
-	background-color: #00c973;
-	color: white;
-	text-align: center;
-	padding: 8px;
-	margin-top: 6px;
-	border-radius: 4px;
-	font-weight: bold;
-	font-size: 12px;
-	text-decoration: none;
-}
-
-.call-button:hover {
-	background-color: #00306f;
-}
-
-.floating-menu,
-.side-menu {
-	position: fixed !important;
-	z-index: 9999 !important;
-	display: block !important;
-	visibility: visible !important;
-	opacity: 1 !important;
-}
-
-</style>
 </head>
 
 <body>
@@ -373,92 +245,92 @@
 
   <section>
    
-  
     <div class="container mt-5">
       <h2 class="text-center mb-4">Our Specialities</h2>
       <div class="speciality-container">
           <div class="speciality-card">
               <img src="img/Obstetrics_Gynaecology.webp" alt="Obstetrics & Gynaecology">
               <h5>Obstetrics & Gynaecology</h5>
-              <button class="btn btn-primary">Read More</button>
+              <a href="Diseases/Obstetrics _Gynaecology.html" class="btn btn-primary">Read More</a>
           </div>
           <div class="speciality-card">
               <img src="img/general_surgery.jpg" alt="General Surgery">
               <h5>General Surgery</h5>
-              <button class="btn btn-primary">Read More</button>
+              <a href="Diseases/general_surgery.html" class="btn btn-primary">Read More</a>
           </div>
           <div class="speciality-card">
               <img src="img/general_medicine.jpg" alt="General Medicine">
               <h5>General Medicine</h5>
-              <button class="btn btn-primary">Read More</button>
+              <a href="Diseases/general_medicine.html" class="btn btn-primary">Read More</a>
           </div>
           <div class="speciality-card">
               <img src="img/urology.jpg" alt="Urology">
               <h5>Urology</h5>
-              <button class="btn btn-primary">Read More</button>
+              <a href="Diseases/urology.html" class="btn btn-primary">Read More</a>
           </div>
           <div class="speciality-card">
               <img src="img/skin.jpg" alt="Skin and Cosmetology">
               <h5>Skin and Cosmetology</h5>
-              <button class="btn btn-primary">Read More</button>
+              <a href="Diseases/skin_cosmetology.html" class="btn btn-primary">Read More</a>
           </div>
           <div class="speciality-card">
               <img src="img/diabetology.jpg" alt="Diabetology">
               <h5>Diabetology</h5>
-              <button class="btn btn-primary">Read More</button>
+              <a href="Diseases/diabetology.html" class="btn btn-primary">Read More</a>
           </div>
           <div class="speciality-card">
               <img src="img/cardiology.jpeg" alt="Cardiology">
               <h5>Cardiology</h5>
-              <button class="btn btn-primary">Read More</button>
+              <a href="Diseases/cardiology.html" class="btn btn-primary">Read More</a>
           </div>
           <div class="speciality-card">
-              <img src="img/oncology.jpeg" alt="Neurology">
+              <img src="img/oncology.jpeg" alt="Oncology">
               <h5>Oncology</h5>
-              <button class="btn btn-primary">Read More</button>
+              <a href="Diseases/oncology.html" class="btn btn-primary">Read More</a>
           </div>
           <div class="speciality-card">
               <img src="img/orthopedics.jpg" alt="Orthopedics">
               <h5>Orthopedics</h5>
-              <button class="btn btn-primary">Read More</button>
+              <a href="Diseases/orthopedics.html" class="btn btn-primary">Read More</a>
           </div>
           <div class="speciality-card">
               <img src="img/NEPHROLOGY.png" alt="Nephrology">
               <h5>Nephrology</h5>
-              <button class="btn btn-primary">Read More</button>
+              <a href="Diseases/Nephrology.html" class="btn btn-primary">Read More</a>
           </div>
           <div class="speciality-card">
               <img src="img/ophtalmology.jpg" alt="Ophthalmology">
               <h5>Ophthalmology</h5>
-              <button class="btn btn-primary">Read More</button>
+              <a href="Diseases/ophthalmology.html" class="btn btn-primary">Read More</a>
           </div>
           <div class="speciality-card">
               <img src="img/pediatrics.jpg" alt="Pediatrics">
               <h5>Pediatrics</h5>
-              <button class="btn btn-primary">Read More</button>
+              <a href="Diseases/pediatrics.html" class="btn btn-primary">Read More</a>
           </div>
           <div class="speciality-card">
               <img src="img/ent.jpg" alt="ENT">
               <h5>ENT</h5>
-              <button class="btn btn-primary">Read More</button>
+              <a href="Diseases/ent.html" class="btn btn-primary">Read More</a>
           </div>
           <div class="speciality-card">
               <img src="img/gastroenterology.jpg" alt="Gastroenterology">
               <h5>Gastroenterology</h5>
-              <button class="btn btn-primary">Read More</button>
+              <a href="Diseases/gastroentrology.html" class="btn btn-primary">Read More</a>
           </div>
           <div class="speciality-card">
-              <img src="img/vascular.jpg" alt="Radiology">
-              <h5>Vascular & Endovascular surgery</h5>
-              <button class="btn btn-primary">Read More</button>
+              <img src="img/vascular.jpg" alt="Vascular & Endovascular Surgery">
+              <h5>Vascular & Endovascular Surgery</h5>
+              <a href="Diseases/vascular.html" class="btn btn-primary">Read More</a>
           </div>
           <div class="speciality-card">
-              <img src="img/pulmonology.jpg" alt="Psychiatry">
+              <img src="img/pulmonology.jpg" alt="Pulmonology">
               <h5>Pulmonology</h5>
-              <button class="btn btn-primary">Read More</button>
+              <a href="Diseases/pulmonology.html" class="btn btn-primary">Read More</a>
           </div>
       </div>
   </div>
+  
   </section>
   <!-- Footer Area -->
   <footer id=" footer" class="footer">

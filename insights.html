@@ -46,134 +46,9 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="css/responsive.css" />
 
-<style>
-  /* Floating Button */
-.floating-menu {
-	position: fixed;
-	top: 50%;
-	left: 0;
-	transform: translateY(-50%);
-	z-index: 9999;
-	transition: left 0.3s ease-in-out;
-	/* Smooth movement */
-}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-.menu-button {
-	background-color: #00c973;
-	color: white;
-	padding: 6px;
-	font-size: 12px;
-	/* Smaller text */
-	font-weight: bold;
-	border: none;
-	cursor: pointer;
-	writing-mode: vertical-rl;
-	text-align: center;
-	border-top-right-radius: 8px;
-	border-bottom-right-radius: 8px;
-	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 3px;
-	height: 80px;
-	/* Reduced height */
-	width: 40px;
-	/* Reduced width */
-	transition: left 0.3s ease-in-out;
-	font-size: 14px;
-}
 
-.menu-button i {
-	font-size: 10px;
-	/* Smaller icon */
-}
-
-.menu-button:hover {
-	background-color: #00c973;
-}
-
-/* Side Menu Panel */
-.side-menu {
-	position: fixed;
-	top: 50%;
-	left: -180px;
-	/* Smaller menu width */
-	transform: translateY(-50%);
-	width: 180px;
-	background: white;
-	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-	transition: left 0.3s ease-in-out;
-	border-top-right-radius: 6px;
-	border-bottom-right-radius: 6px;
-	padding: 5px;
-	overflow: visible;
-}
-
-/* When menu opens */
-.side-menu.active {
-	left: 0;
-}
-
-/* Adjust button position when menu is open */
-.floating-menu.expanded {
-	left: 180px;
-}
-
-/* Menu links */
-.side-menu a {
-	display: flex;
-	align-items: center;
-	padding: 8px;
-	/* Smaller padding */
-	text-decoration: none;
-	color: #00c973;
-	font-weight: bold;
-	border-bottom: 1px solid #eee;
-	transition: 0.3s;
-	font-size: 12px;
-	/* Smaller font */
-}
-
-.side-menu a i {
-	margin-right: 6px;
-	/* Reduced spacing */
-	font-size: 12px;
-	/* Smaller icons */
-}
-
-.side-menu a:hover {
-	background: #f1f1f1;
-}
-
-/* Call Us Button */
-.call-button {
-	display: block;
-	background-color: #00c973;
-	color: white;
-	text-align: center;
-	padding: 8px;
-	margin-top: 6px;
-	border-radius: 4px;
-	font-weight: bold;
-	font-size: 12px;
-	text-decoration: none;
-}
-
-.call-button:hover {
-	background-color: #00306f;
-}
-
-.floating-menu,
-.side-menu {
-	position: fixed !important;
-	z-index: 9999 !important;
-	display: block !important;
-	visibility: visible !important;
-	opacity: 1 !important;
-}
-
-</style>
 </head>
 
 <body>
@@ -203,19 +78,24 @@
           <div class="col-lg-6 col-md-5 col-12">
             <!-- Contact -->
             <ul class="top-link">
-              <li><a href="about.html">About</a></li>
+              
+              <li><a href="about.html" class="active">About</a></li>
               <li><a href="dotors.html">Doctors</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
             <!-- End Contact -->
           </div>
+
           <div class="col-lg-6 col-md-7 col-12">
             <!-- Top Contact -->
+
             <ul class="top-contact">
-              <li><i class="fa fa-phone"></i>+91-805022777</li>
-              <li>
-                <i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com">ravindraseganvi@gmail.com</a>
-              </li>
+              <marquee>
+                <li><i class="fa fa-phone"></i>+91-805022777</li>
+                <li>
+                  <i class="fa fa-envelope"></i><a href="mailto:ravindraseganvi@gmail.com">ravindraseganvi@gmail.com</a>
+                </li>
+              </marquee>
             </ul>
             <!-- End Top Contact -->
           </div>
@@ -228,22 +108,21 @@
       <div class="container">
         <div class="inner">
           <div class="row">
-            <div class="col-lg-3 col-md-3 col-12">
+            <div class="col-lg-3 col-md-3 ">
               <!-- Start Logo -->
               <div class="logo">
-                <a href="index.html"><img src="img/Raksha_logo-Photoroom.png" alt="#" /></a>
+                <a href="index.html"><img src="img/Raksha_logo-Photoroom.png"  alt="#" /></a>
               </div>
-              <!-- End Logo -->
-              <!-- Mobile Nav -->
+              
               <div class="mobile-nav"></div>
-              <!-- End Mobile Nav -->
+            
             </div>
             <div class="col-lg-7 col-md-9 col-12">
               <!-- Main Menu -->
               <div class="main-menu">
                 <nav class="navigation">
                   <ul class="nav menu">
-                    <li class="active">
+                    <li >
                       <a href="index.html">Home </a>
 
                     </li>
@@ -267,11 +146,12 @@
                             <li><a href="Diseases/skin_cosmetology.html"><img src="img/derma-icon.webp" alt=""
                                   width="13%"> Skin and
                                 Cosmetology</a></li>
-                            <li><a href="Diseases/diabetology.html"><img src="img/diabetes-icon.webp" alt=""
-                                  width="13%">Diabetology</a></li>
+                            <li><a href="specialities.html"><button class="btn"
+                                  style="background-color: #077bf6; margin-left: 10px;"><i
+                                    class="fas fa-arrow-right"></i> View More Specialties</button> </a></li>
                           </div>
 
-                          
+
 
 
                         </div>
@@ -281,26 +161,11 @@
 
                     <li>
                       <a href="healthCheckups.html">Health Check Up </a>
-                      <!-- <ul class="dropdown">
-                        <li><a href="404.html">404 Error</a>
-                        </li>
-
-                        <li><a href="demo1.html">Gallary</a></li>
-                        <li><a href="demo2.html">Demo Page 2</a></li>
-                        <li><a href="demo3.html">Demo Page 3</a></li>
-                        <li><a href="demo4.html">Demo Page 4</a></li>
-                        <li><a href="demo5.html">Demo Page 5</a></li>
-                        <li><a href="demo6.html">Demo Page 6</a></li>
-                        <li><a href="demo7.html">Demo Page 7</a></li>
-                        <li><a href="demo8.html">Demo Page 8</a></li>
-                        <li><a href="demo9.html">Demo Page 9</a></li>
-                        <li><a href="demo10.html">Demo Page 10</a></li>
-
-                      </ul> -->
+                     
                     </li>
                     <li><a href="blog.html">Blogs </a></li>
 
-                    <li>
+                    <li class="active">
                       <a href="#">Pages <i class="icofont-rounded-down"></i></a>
                       <ul class="dropdown">
 
@@ -314,8 +179,8 @@
                       </ul>
                     </li>
 
-                    
-                      </li> 
+
+                    </li>
                   </ul>
                 </nav>
               </div>
